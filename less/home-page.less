@@ -1,24 +1,49 @@
 .home {
 
+  .header-section {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed @navigation-border;
+
+    img {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    @media @tablet {
+      align-items: center;
+    }
+    @media @mobile {
+      flex-direciton: column;
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      .full-mb;
+      @media @mobile {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      .full-mb;
+      @media @mobile {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
       img {
         border-radius: 10px;
+        .full-mb;
       }
     }
   }
@@ -26,36 +51,97 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      .full-mb;
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      .full-mb;
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    .full-tb;
 
     img {
       border-radius: 10px;
+      .full-tb;
     }
   }
 
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    @media @tablet {
+      padding-left: 10%;
+      padding-right: 10%;
+      flex-direction: column;
+    }
+
+    .btn {
+      .button(84%, @teal);
+      @media @tablet {
+        .button(100%, @eastern-blue);
+      }
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      .full-tb;
+      @media @mobile {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .content-select {
+    margin: 30px auto;
+    width: 70%;
+    .full-mb;
+
+    form {
+      label {
+        font-size: 1.8rem;;
+      }
+
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 8px 10px;
+        margin: 7px 0 10px 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 5px;
+        border: solid 2px @silver;
+        display: block;
+      }
+
+      select {
+        background-color: @white;
+      }
+
+      .message {
+        height: 200px;
+      }
+
+      input[type=submit] {
+        .button(100%, @shark);
+        border: none;
+      }
     }
   }
 }// home
