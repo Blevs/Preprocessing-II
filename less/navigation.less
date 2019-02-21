@@ -23,9 +23,11 @@
     h2 {
       font-size: 4.0rem;
       padding-top: 5px;
+      @media @tablet {
+        font-size: 3.0rem;
+      }
       @media @mobile {
         padding-top: 12px;
-        font-size: 3.0rem;
       }
     }
 
@@ -34,8 +36,10 @@
       display: flex;
       justify-content: space-between;
       padding-right: 30px;
-      @media @mobile {
+      @media @tablet {
         padding-right: 0;
+      }
+      @media @mobile {
         width: 85%;
         flex-wrap: wrap;
       }
