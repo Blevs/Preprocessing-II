@@ -364,6 +364,7 @@ img {
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
+  border-bottom: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
@@ -409,4 +410,45 @@ img {
   .home .content-pick .destination {
     margin-bottom: 32px;
   }
+}
+.home .content-select {
+  margin: 30px auto;
+  width: 70%;
+}
+@media (max-width: 500px) {
+  .home .content-select {
+    width: 100%;
+  }
+}
+.home .content-select form label {
+  font-size: 1.8rem;
+}
+.home .content-select form input[type=text],
+.home .content-select form select,
+.home .content-select form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 7px 0 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 5px;
+  border: solid 2px #C0C0C0;
+  display: block;
+}
+.home .content-select form select {
+  background-color: #FFFFFF;
+}
+.home .content-select form .message {
+  height: 200px;
+}
+.home .content-select form input[type=submit] {
+  padding: 13px 0;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #212529;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  border: none;
 }

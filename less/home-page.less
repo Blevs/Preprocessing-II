@@ -83,6 +83,7 @@
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+    border-bottom: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
     @media @tablet {
@@ -104,6 +105,42 @@
       .full-tb;
       @media @mobile {
         margin-bottom: 32px;
+      }
+    }
+  }
+
+  .content-select {
+    margin: 30px auto;
+    width: 70%;
+    .full-mb;
+
+    form {
+      label {
+        font-size: 1.8rem;;
+      }
+
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 8px 10px;
+        margin: 7px 0 10px 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 5px;
+        border: solid 2px @silver;
+        display: block;
+      }
+
+      select {
+        background-color: @white;
+      }
+
+      .message {
+        height: 200px;
+      }
+
+      input[type=submit] {
+        .button(100%, @shark);
+        border: none;
       }
     }
   }
